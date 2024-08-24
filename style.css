@@ -1,0 +1,175 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #7d8f8f;
+  height: 100vh;
+  margin: 0;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid black;
+  box-shadow: 8px 6px 7px 5px rgba(0, 0, 0, 0.73);
+}
+nav button a {
+  text-decoration: none;
+  color: white;
+}
+
+form {
+  margin-top: 70px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-left: 30%;
+  display: none;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+#heading{
+    color: rgb(218, 208, 208);
+    font-size: 800;
+    font-family: 'popins',sans-serif;
+    text-align: center;
+    border-bottom: 3px solid black;
+    margin-bottom: 60px;
+}
+#card{
+  width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10%;
+}
+#uploadActions{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.loader {
+  width: 100px;
+  aspect-ratio: 1;
+  display: flex;
+  color: #000;
+  display: none;
+  border: 4px solid;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle 5px, currentColor 95%,#0000),
+    linear-gradient(currentColor 50%,#0000 0) 50%/4px 60% no-repeat;
+  animation: l1 2s infinite linear;
+}
+.loader:before {
+  content: "";
+  flex: 1;
+  background:linear-gradient(currentColor 50%,#0000 0) 50%/4px 80% no-repeat;
+  animation: inherit;
+}
+@keyframes l1 {
+  100% {transform: rotate(1turn)}
+}
+.NOTHINg{
+  color: red;
+  font-size: 30px;
+  text-align: center;
+}
+.back{
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin:  70px 40px 60px;
+}
+#addBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ldr {
+  width: 60px;
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side,#000 90%,#0000) 0/calc(100%/3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: l1 1s steps(4) infinite;
+  display: none;
+}
+@keyframes l1 {to{clip-path: inset(0 -34% 0 0)}}
+.loadr {
+  width: 48px;
+  height: 48px;
+  border:10px solid #FFF;
+  display: none;
+  border-radius: 50%;
+
+  position: relative;
+  transform:rotate(45deg);
+  box-sizing: border-box;
+}
+.loadr::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  inset:-10px;
+  border-radius: 50%;
+  border:10px solid #FF3D00;
+  animation: prixClipFix 2s infinite linear;
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+#loader{
+ display: flex;
+ align-items: center;
+ justify-content: center;  
+ margin-bottom: 5px;
+  }
+  .card{
+    background-color: #000;
+    color: #ccc;
+    width: 20%;
+    box-shadow: 6px 9px 2px black ;
+    height:100%;
+  }
